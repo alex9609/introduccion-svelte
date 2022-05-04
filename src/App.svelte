@@ -20,8 +20,13 @@
 		{/each}
 	</ul>
 
-	<button on:click={agregarNumero} class="btn btn-primary">Agregar número</button>
-
+	
+	{#if numeros.length > 5}
+		 <!-- Condicional if -->
+		 <h3>Agregaste más de 5 numeros </h3>
+		 {:else}
+		 <button on:click={agregarNumero} class="btn btn-primary">Agregar número</button>		 
+	{/if}
 	<ul>
 		<p>Números</p>
 		{#each numeros as num}
